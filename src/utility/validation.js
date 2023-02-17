@@ -14,7 +14,9 @@ const isEmpty = function (value) {
 }
 
 const isValidUrl= function (value) {
-    let checkUrl = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&=]*)/
+    let checkUrl = /[a-z]/
+
+   // let checkUrl = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&=]*)/
     if (checkUrl.test(value)) {
         return true;
     }

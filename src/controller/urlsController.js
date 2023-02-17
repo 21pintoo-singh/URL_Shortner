@@ -7,11 +7,11 @@ const { promisify } = require("util");
 
 //Connect to redis
 const redisClient = redis.createClient(
-  16422,
-  "redis-16422.c212.ap-south-1-1.ec2.cloud.redislabs.com",
+  19821,
+  "redis-19821.c301.ap-south-1-1.ec2.cloud.redislabs.com",
   { no_ready_check: true }
 );
-redisClient.auth("imFcMvGFPUO59acsqCrzpJU84MNDbShd", function (err) {
+redisClient.auth("LGszmdSk0gshXXTMd2TzmpCm6YepGrYs", function (err) {
   if (err) throw err;
 });
 
@@ -50,18 +50,18 @@ const createShortUrl = async function (req, res) {
                 status: false,
                 msg: 'please enter valid url'
             })
-
-        // to check the longurl code in cachememory 
-        let checkLongUrl = await GET_ASYNC(`${longUrl}`)
-        if(checkLongUrl){
-            return res.status(400).send({
-                status: false,
-                message: "link is already shorted",
-                data:JSON.parse(checkLongUrl)
-            })
-        }
-
-        // to check the longUrl in our database 
+                
+                // to check the longurl code in cachememory 
+            let checkLongUrl = await GET_ASYNC(`${longUrl}`)
+            if(checkLongUrl){
+                return res.status(400).send({
+                    status: false,
+                    message: "link is already shorted",
+                    data:JSON.parse(checkLongUrl)
+                })
+            }
+            
+            // to check the longUrl in our database 
         const checkUniqueUrl = await UrlModel.findOne({ longUrl: longUrl })
         if (checkUniqueUrl) {
             return res.status(400).send({

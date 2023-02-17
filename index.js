@@ -1,10 +1,19 @@
 const express = require("express");
 const mongoose=require("mongoose");
 const bodyParser=require("body-parser");
-const route=require("./routes/route");
+const route=require("./src/routes/route.js");
 const cors = require("cors");
 const app =express();
 const port=3000;
+
+mongoose.set('strictQuery', false);
+// import express from "express";
+// import { connect } from "mongoose";
+// import { json, urlencoded } from "body-parser";
+// import route from "./routes/route.js";
+// import cors from "cors";
+// const app =express();
+// const port=3000;
 
 app.use(cors({origin:"*"}))
 app.use(bodyParser.json());
