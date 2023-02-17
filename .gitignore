@@ -20,5 +20,7 @@ Thumbs.db
 *.log
 temp/
 .Thumbs
-.ts
-.json
+.git/info/exclude
+/log.file
+/name/log.file
+/name.file
