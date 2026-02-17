@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "lodash": "^4.17.23",
+    "mongoose": "^9.2.1",
+    "node-url-shortener": "^2.0.3",
+    "nodemon": "^3.1.11",
+    "redis": "^5.11.0",
+    "shortid": "^2.2.17",
+    "valid-url": "^1.0.9"
+  },
+  "name": "url_shortner",
+  "description": "𝘂𝗿𝗹𝗦𝗵𝗼𝗿𝘁𝗻𝗲𝗿 URL shortening is used to create shorter aliases for long URLs. We call these shortened aliases “short links.” Users are redirected to the original URL when they hit these short links. Short links save a lot of space when displayed, printed, messaged, or tweeted. Additionally, users are less likely to mistype shorter URLs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
